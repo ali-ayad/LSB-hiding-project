@@ -3,7 +3,7 @@ from PIL import Image
 
 
 def encode():
-    message = input("Enter the text to be hidden: ")
+    message = input("Enter the text to be hidden: ") + ("0")
     # Encode the message in a serie of 8-bit values
     b_message = ''.join(["{:08b}".format(ord(x)) for x in message])
     b_message = [int(x) for x in b_message]
